@@ -113,16 +113,7 @@ const Table = ({ totalpages }) => {
       setCurrentPage(1);
     }
   };
-  const clickNext = () => {
-    if (filterPaginate > 0) {
-      totalpages = filterPaginate;
-    }
-    if (currentPage < totalpages) {
-      setCurrentPage(parseInt(currentPage) + 1);
-    } else {
-      setCurrentPage(totalpages);
-    }
-  };
+
   var divs = [];
 
   if (filterPaginate > 0) {
@@ -134,16 +125,6 @@ const Table = ({ totalpages }) => {
       divs.push(i + 1);
     }
   }
-
-  const onClickPage = (e) => {
-    e.preventDefault();
-    const page = e.target.id;
-    if (filter == undefined) {
-      setCurrentPage(page);
-    } else {
-      setCurrentFilterPage(page);
-    }
-  };
 
   const onFilter = (e) => {
     e.preventDefault();
@@ -376,6 +357,7 @@ const Table = ({ totalpages }) => {
                 onClick={clickPrev}
                 tabIndex="-1"
                 aria-disabled="true"
+                disabled={true}
               >
                 Previous
               </button>
@@ -384,14 +366,14 @@ const Table = ({ totalpages }) => {
               divs.map((i) => {
                 return (
                   <li className="page-item">
-                    <button id={i} className="page-link" onClick={onClickPage}>
+                    <button id={i} className="page-link">
                       {i}
                     </button>
                   </li>
                 );
               })}
             <li className="page-item">
-              <button className="page-link" onClick={clickNext}>
+              <button className="page-link" disabled={true}>
                 Next
               </button>
             </li>
