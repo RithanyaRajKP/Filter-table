@@ -1,0 +1,58 @@
+.desc {
+    height: 7rem;
+    overflow: auto;
+    width: 14rem;
+}
+
+.width {
+    width: 5rem;
+}
+.w-15 {
+    width: 15rem;
+}
+.font-size {
+    font-size: 0.7rem;
+}
+
+.disable {
+    cursor: not-allowed;
+}
+.filter {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.filter-form {
+    display: flex;
+    align-items: center;
+}
+.dateInput {
+    width: 18rem;
+    height: 4rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    outline: none;
+    border: 3px solid #4fc3f745;
+}
+.table {
+
+    --bs-table-striped-bg: #e1f5fea6 !important;
+    --bs-table-hover-bg: #29b6f630 !important;
+
+}
+
+.filterType{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+
+}
+
+input[type=radio] {
+    width: 27px;
+    height: 29px;
+}
+.btn {
+    /* padding: 1rem 3rem 1rem 3rem !important; */
+}
